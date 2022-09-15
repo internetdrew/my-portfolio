@@ -7,7 +7,11 @@
   --text-color-secondary: #d6336c;
 }
 
-* {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -25,10 +29,60 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 li {
   list-style-type: none;
+}
+
+header {
+  height: 100vh;
+  position: relative;
+}
+
+section {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+span.color {
+  color: var(--text-color-secondary);
+}
+
+h1 {
+  font-size: 5.2rem;
+}
+
+h2 {
+  font-size: 4.4rem;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100rem;
+  background-color: #647bff;
+}
+
+.hero-container {
+  width: 100rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-container h2 {
+  margin-bottom: 3.2rem;
+}
+
+.hero-container p {
+  margin-bottom: 2.4rem;
 }
 
 .main-nav {
@@ -42,12 +96,13 @@ li {
 .main-nav .logo {
   font-weight: 700;
   font-size: 2.4rem;
+  color: var(--text-color-secondary);
 }
 
-.main-nav .nav-container {
+.main-nav .nav-links-container {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 .main-nav .nav-links {
@@ -55,7 +110,8 @@ li {
   gap: 4rem;
 }
 
-.main-nav .nav-link a {
+.main-nav .nav-link a:link,
+.main-nav .nav-link a:visited {
   color: inherit;
   font-size: 1.8rem;
 }
@@ -63,26 +119,37 @@ li {
   color: var(--text-color-secondary);
 }
 
-.main-nav .nav-link:last-of-type {
-  margin-right: 3rem;
-}
-
-.resume {
-  font-family: inherit;
-  letter-spacing: inherit;
-  cursor: pointer;
-  padding: 1rem 3rem;
-  background: transparent;
-  border-radius: 5px;
-  border: 1px solid #fff;
+.resume a:link,
+.resume a:visited {
   color: inherit;
+  font-size: 1.8rem;
+  border: 1px solid var(--text-color-primary);
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  margin-left: 3.2rem;
 }
 
-.resume:hover {
+.resume-link {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0.5rem 3.2rem;
+}
+
+.resume a:hover {
   color: var(--text-color-secondary);
   border-color: var(--text-color-secondary);
 }
 
 .resume:active {
   transform: scale(0.98);
+}
+
+.menu-icon {
+  cursor: pointer;
+  color: var(--text-color-secondary);
+  display: none;
+}
+
+.social-links a {
+  margin-right: 2rem;
 }
