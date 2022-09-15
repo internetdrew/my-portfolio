@@ -150,6 +150,11 @@ p {
   display: none;
 }
 
-.social-links a {
+.social-links a:link,
+.social-links a:visited {
   margin-right: 2rem;
+}
+
+.social-links a:hover {
+  color: var(--text-color-secondary);
 }
