@@ -2,7 +2,7 @@
 
 :root {
   --main-color: #647bff;
-  --body-color: #081426;
+  --body-color: #09172a;
   --text-color-primary: #ced1d5;
   --text-color-secondary: #d6336c;
 }
@@ -75,4 +75,8 @@ body {
 .resume:hover {
   color: var(--text-color-secondary);
   border-color: var(--text-color-secondary);
+}
+
+.resume:active {
+  transform: scale(0.98);
 }
