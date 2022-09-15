@@ -190,6 +190,8 @@ section {
   cursor: pointer;
   color: var(--text-color-secondary);
   opacity: 0;
+  font-size: 4rem;
+  transition: all 0.3s ease-in;
 }
 
 .arrow-up.show {
