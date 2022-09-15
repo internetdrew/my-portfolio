@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --main-color: #647bff;
+  --body-color: #081426;
+  --text-color-primary: #ced1d5;
+  --text-color-secondary: #d6336c;
+}
 
 * {
   box-sizing: border-box;
@@ -10,18 +17,18 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Lato', sans-serif;
   margin: 0;
-  background-color: #1864ab;
-  color: #fff;
+  background-color: var(--body-color);
+  color: var(--text-color-primary);
 }
 
 .main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.4rem 4rem;
-  letter-spacing: 0.2rem;
+  padding: 3rem 5rem;
+  letter-spacing: 0.15rem;
 }
 
 .main-nav .logo {
@@ -42,13 +49,16 @@ body {
 }
 
 .main-nav .nav-link a {
-  color: #fff;
+  color: inherit;
   text-decoration: none;
   font-size: 1.8rem;
 }
+.main-nav .nav-link a:hover {
+  color: var(--text-color-secondary);
+}
 
 .main-nav .nav-link:last-of-type {
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 
 .resume {
@@ -59,5 +69,10 @@ body {
   background: transparent;
   border-radius: 5px;
   border: 1px solid #fff;
-  color: #fff;
+  color: inherit;
+}
+
+.resume:hover {
+  color: var(--text-color-secondary);
+  border-color: var(--text-color-secondary);
 }
