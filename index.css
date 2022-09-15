@@ -26,6 +26,7 @@ body {
   background-color: var(--body-color);
   color: var(--text-color-primary);
   margin: 0;
+  position: relative;
 }
 
 a {
@@ -178,4 +179,19 @@ section {
 
 .about-section img {
   width: 32rem;
+  height: auto;
+  object-fit: cover;
+}
+
+.arrow-up {
+  position: fixed;
+  right: 5rem;
+  bottom: 5rem;
+  cursor: pointer;
+  color: var(--text-color-secondary);
+  opacity: 0;
+}
+
+.arrow-up.show {
+  opacity: 1;
 }
