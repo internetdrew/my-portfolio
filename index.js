@@ -1,18 +1,17 @@
 'strict mode';
 
-const sections = document.querySelectorAll('section');
 const header = document.querySelector('header');
 const arrow = document.getElementById('up-arrow');
 
 const showArrow = function (entry) {
   console.log(entry[0].isIntersecting);
-  if (entry[0].isIntersecting) arrow.style.opacity = 1;
-  if (!entry[0].isIntersecting) arrow.style.opacity = 0;
+  if (!entry[0].isIntersecting) arrow.style.opacity = 1;
+  if (entry[0].isIntersecting) arrow.style.opacity = 0;
 };
 
 const toggleArrow = function () {
   const observer = new IntersectionObserver(showArrow, { threshold: 1 });
-  observer.observe(sections[0]);
+  observer.observe(header);
 };
 
 const scrollToTop = function () {
