@@ -101,6 +101,11 @@ section {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.resume:active,
+.form button:active {
+  transform: scale(0.98);
+}
+
 .hero-container {
   width: 100rem;
   position: absolute;
@@ -235,6 +240,7 @@ section {
 /* *************** */
 /* CONTACT SECTION */
 /* *************** */
+
 .contact {
   flex-direction: column;
 }
@@ -312,6 +318,10 @@ section {
   visibility: visible;
 }
 
+.form textarea {
+  resize: none;
+}
+
 .form button {
   cursor: pointer;
   background-color: var(--accent-color);
@@ -320,6 +330,7 @@ section {
   border-radius: 4px;
   display: block;
   font-size: 1.8rem;
+  font-weight: 700;
   padding: 1rem;
   margin-top: 2rem;
   width: 100%;
