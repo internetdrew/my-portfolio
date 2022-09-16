@@ -7,6 +7,10 @@ const nameEl = document.getElementById('name');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 
+const capFirstLetter = function (str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
 const showArrow = function (entry) {
   if (!entry[0].isIntersecting) arrow.style.opacity = 1;
   if (entry[0].isIntersecting) arrow.style.opacity = 0;
@@ -30,16 +34,20 @@ const showError = function (input, msg) {
   const small = formControl.querySelector('small');
 
   formControl.classList.add('error');
-  small.textContent = msg;
+  small.textContent =
+    input.id === 'email' ? `Valid email is required` : `${capFirstLetter(msg)}`;
 };
 
-const showsuccess = function (input) {};
+const showSuccess = function (input) {
+  const formControl = input.parentElement;
+  formControl.classList.remove('error');
+  formControl.classList.add('success');
+};
 
 const checkRequired = function (inputArr) {
   inputArr.forEach(input => {
     if (!input.value.trim()) {
       showError(input, `${input.id} is required`);
-      return;
     }
 
     if (input.value.trim()) {
@@ -56,6 +64,5 @@ form.addEventListener('submit', e => {
 
   checkRequired([nameEl, email, message]);
 
-  return;
   form.submit();
 });

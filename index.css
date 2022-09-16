@@ -297,7 +297,8 @@ section {
   outline: 0;
 }
 
-.form-control.success input {
+.form-control.success input,
+.form-control.success textarea {
   border-color: var(--success-color);
 }
 
