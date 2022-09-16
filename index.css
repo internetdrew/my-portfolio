@@ -13,11 +13,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -74,6 +74,12 @@ section {
   width: 90rem;
   margin-bottom: 9.6rem;
   padding: 4.8rem;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid {
@@ -218,6 +224,70 @@ section {
 
 .projects h3 {
   text-align: center;
+}
+
+.projects--container {
+  justify-items: center;
+}
+
+/* *************** */
+/* CONTACT SECTION */
+/* *************** */
+.contact {
+  flex-direction: column;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.form {
+  margin: 1.2rem 0;
+  /* padding: 3rem 4rem; */
+  max-width: 60rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form p {
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.form-control label,
+.form-control input,
+.form-control small,
+.form-control textarea {
+  display: block;
+  width: 100%;
+}
+
+.form-control label {
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.form-control input,
+.form-control textarea {
+  border: 0.2rem solid #f0f0f0;
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: 0;
+  border-color: var(--accent-color);
 }
 
 /* *************** */
