@@ -301,7 +301,8 @@ section {
   border-color: var(--success-color);
 }
 
-.form-control.error input {
+.form-control.error input,
+.form-control.error textarea {
   border-color: var(--error-color);
 }
 
