@@ -76,6 +76,22 @@ section {
   padding: 4.8rem;
 }
 
+.grid {
+  display: grid;
+}
+
+.grid--2--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3--cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4--cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .hero-container {
   width: 100rem;
   position: absolute;
@@ -201,6 +217,9 @@ section {
 
 .projects h3 {
   text-align: center;
+}
+
+.projects--container {
 }
 
 /* *************** */
