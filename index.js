@@ -1,6 +1,7 @@
 'strict mode';
 
 const sections = document.querySelectorAll('section');
+const header = document.querySelector('header');
 const arrow = document.getElementById('up-arrow');
 
 const showArrow = function (entry) {

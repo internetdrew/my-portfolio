@@ -3,8 +3,8 @@
 :root {
   --main-color: #647bff;
   --body-color: #09172a;
-  --text-color-primary: #e7e8ea;
-  --text-color-secondary: #d6336c;
+  --text-color: #e7e8ea;
+  --accent-color: #d6336c;
 }
 
 *,
@@ -24,7 +24,7 @@ body {
   font-size: 1.6rem;
   font-family: 'Lato', sans-serif;
   background-color: var(--body-color);
-  color: var(--text-color-primary);
+  color: var(--text-color);
   margin: 0;
   position: relative;
 }
@@ -49,7 +49,7 @@ section {
 }
 
 span.color {
-  color: var(--text-color-secondary);
+  color: var(--accent-color);
 }
 
 h1 {
@@ -72,6 +72,8 @@ p {
 section {
   margin: 4.8rem auto;
   width: 90rem;
+  margin-bottom: 9.6rem;
+  padding: 4.8rem;
 }
 
 .hero-container {
@@ -80,6 +82,7 @@ section {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  padding: 4.8rem;
 }
 
 .hero-container h2 {
@@ -89,6 +92,10 @@ section {
 .hero-container p {
   margin-bottom: 1.8rem;
 }
+
+/* *************** */
+/* MAIN SECTION */
+/* *************** */
 
 .main-nav {
   display: flex;
@@ -101,7 +108,7 @@ section {
 .main-nav .logo {
   font-weight: 700;
   font-size: 2.4rem;
-  color: var(--text-color-secondary);
+  color: var(--accent-color);
 }
 
 .main-nav .nav-links-container {
@@ -119,15 +126,16 @@ section {
   color: inherit;
   font-size: 1.8rem;
 }
-.main-nav .nav-link a:hover {
-  color: var(--text-color-secondary);
+.main-nav .nav-link a:hover,
+.main-nav .nav-link a:active {
+  color: var(--accent-color);
 }
 
 .resume a:link,
 .resume a:visited {
   color: inherit;
   font-size: inherit;
-  border: 1px solid var(--text-color-primary);
+  border: 1px solid var(--text-color);
   border-radius: 5px;
   padding: 0.8rem 1rem;
   margin-left: 3.2rem;
@@ -140,8 +148,8 @@ section {
 }
 
 .resume a:hover {
-  color: var(--text-color-secondary);
-  border-color: var(--text-color-secondary);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .resume:active {
@@ -150,7 +158,7 @@ section {
 
 .menu-icon {
   cursor: pointer;
-  color: var(--text-color-secondary);
+  color: var(--accent-color);
   display: none;
 }
 
@@ -160,14 +168,18 @@ section {
 }
 
 .social-links a:hover {
-  color: var(--text-color-secondary);
+  color: var(--accent-color);
 }
 
 .hero-container-inner {
   width: 75%;
 }
 
-.about-section {
+/* *************** */
+/* ABOUT SECTION */
+/* *************** */
+
+.about-section--content {
   display: flex;
   justify-content: space-between;
   gap: 5.6rem;
@@ -183,12 +195,24 @@ section {
   object-fit: cover;
 }
 
+/* *************** */
+/* PROJECTS SECTION */
+/* *************** */
+
+.projects h3 {
+  text-align: center;
+}
+
+/* *************** */
+/* ARROW STYLES */
+/* *************** */
+
 .arrow-up {
   position: fixed;
   right: 5rem;
   bottom: 5rem;
   cursor: pointer;
-  color: var(--text-color-secondary);
+  color: var(--accent-color);
   opacity: 0;
   font-size: 4.8rem;
   transition: all 0.3s ease-in;
