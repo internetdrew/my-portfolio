@@ -10,7 +10,10 @@ const showArrow = function (entry) {
 };
 
 const toggleArrow = function () {
-  const observer = new IntersectionObserver(showArrow, { threshold: 1 });
+  const observer = new IntersectionObserver(showArrow, {
+    rootMargin: '-200px',
+    // threshold: 1,
+  });
   observer.observe(header);
 };
 

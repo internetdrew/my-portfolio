@@ -78,6 +78,7 @@ section {
 
 .grid {
   display: grid;
+  gap: 9.6rem;
 }
 
 .grid--2--cols {
@@ -217,9 +218,6 @@ section {
 
 .projects h3 {
   text-align: center;
-}
-
-.projects--container {
 }
 
 /* *************** */
