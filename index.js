@@ -12,8 +12,8 @@ const capFirstLetter = function (str) {
 };
 
 const showArrow = function (entry) {
-  if (!entry[0].isIntersecting) arrow.style.opacity = 1;
-  if (entry[0].isIntersecting) arrow.style.opacity = 0;
+  if (!entry[0].isIntersecting) arrow.style.display = 'block';
+  if (entry[0].isIntersecting) arrow.style.display = 'none';
 };
 
 const toggleArrow = function () {
@@ -56,13 +56,21 @@ const checkRequired = function (inputArr) {
   });
 };
 
+const checkInputValidity = function (inputArr) {
+  return inputArr.every(input =>
+    input.parentElement.classList.contains('success')
+  );
+};
+
 // Event handlers
 window.addEventListener('scroll', toggleArrow);
 arrow.addEventListener('click', scrollToTop);
 form.addEventListener('submit', e => {
   e.preventDefault();
+  const inputs = [nameEl, email, message];
 
-  checkRequired([nameEl, email, message]);
+  checkRequired(inputs);
+  const allInputsValid = checkInputValidity(inputs);
 
-  form.submit();
+  if (allInputsValid) form.submit();
 });

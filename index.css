@@ -78,6 +78,10 @@ section {
   padding: 4.8rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .centered {
   display: flex;
   justify-content: center;
@@ -348,11 +352,11 @@ section {
   bottom: 5rem;
   cursor: pointer;
   color: var(--accent-color);
-  opacity: 0;
+  /* opacity: 0; */
   font-size: 4.8rem;
   transition: all 0.3s ease-in;
 }
 
 .arrow-up.show {
-  opacity: 1;
+  /* opacity: 1; */
 }
