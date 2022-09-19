@@ -221,24 +221,32 @@ section {
 
 .section-heading {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .about-section img {
   width: 32rem;
   height: auto;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 /* *************** */
 /* PROJECTS SECTION */
 /* *************** */
 
-.projects h3 {
-  text-align: center;
+.projects-container {
+  display: flex;
 }
 
-.projects--container {
-  justify-items: center;
+.projects {
+  max-width: 110rem;
+  width: 100%;
+}
+
+.project-img {
+  max-width: 100%;
+  object-fit: cover;
 }
 
 /* *************** */
