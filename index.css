@@ -241,20 +241,21 @@ section {
 }
 
 .projects-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
 }
 
 .project {
   display: flex;
   flex-direction: column;
+  padding: 2rem;
 }
 
 .project-img {
-  width: 48rem;
-  height: 27rem;
-  max-width: 100%;
+  width: 35rem;
+  height: 20rem;
+
   object-fit: cover;
 }
 
@@ -262,13 +263,17 @@ section {
   margin-bottom: 1rem;
 }
 
+.project-description {
+  margin-bottom: 2rem;
+}
+
 .project-stack-container {
-  margin-top: 2rem;
+  margin-top: auto;
 }
 
 .project-stack span {
-  border: 2px solid var(--accent-color);
-  padding: 0.5rem;
+  border: 1px solid var(--accent-color);
+  padding: 1rem;
   margin-right: 1.6rem;
   border-radius: 25px;
 }
