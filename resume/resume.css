@@ -56,13 +56,11 @@ a {
 }
 
 .qualifications--list li {
-  display: flex;
-  align-items: center;
-  line-height: 3rem;
+  line-height: 2.4rem;
 }
 
 li ion-icon {
-  font-size: 2.4rem;
+  font-size: 24px;
   margin-right: 0.5rem;
   color: green;
 }
@@ -144,4 +142,23 @@ a {
 
 .card--project a:hover {
   color: var(--mainLinkColor);
+}
+
+@media (max-width: 600px) {
+  .wrapper--hero {
+    flex-direction: column;
+  }
+
+  .profile-img {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .section--page {
+    padding: 1rem 0;
+  }
+
+  .user-info {
+    text-align: center;
+  }
 }
