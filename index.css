@@ -270,7 +270,7 @@ section {
 .project-links {
   margin-top: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 ion-icon {
