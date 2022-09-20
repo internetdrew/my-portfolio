@@ -147,6 +147,7 @@ a {
 @media (max-width: 600px) {
   .wrapper--hero {
     flex-direction: column;
+    gap: 1rem;
   }
 
   .profile-img {
@@ -160,5 +161,10 @@ a {
 
   .user-info {
     text-align: center;
+  }
+
+  .card--work-history {
+    border-left: none;
+    padding-left: 0;
   }
 }
