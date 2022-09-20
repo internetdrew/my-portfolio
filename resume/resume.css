@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
 :root {
-  --mainTextColor: #000;
-  --secondaryTextColor: #333;
-  --mainLinkColor: #0da2b8;
-  --mainBorderColor: #dadada;
-  --mainBgColor: #f9fafb;
+  --mainTextColor-light: #000;
+  --secondaryTextColor-light: #333;
+  --mainLinkColor-light: #0da2b8;
+  --mainBorderColor-light: #dadada;
+  --mainBgColor-light: #f9fafb;
+
+  --mainTextColor-dark: #fff;
+  --secondaryTextColor-dark: #adb0b1;
+  --mainLinkColor-dark: #1ebed6;
+  --mainBorderColor-dark: #2b3031;
+  --mainBgColor-dark: #131415;
+
+  --mainTextColor: var(--mainTextColor-dark);
+  --secondaryTextColor: var(--secondaryTextColor-dark);
+  --mainLinkColor: var(--mainLinkColor-dark);
+  --mainBorderColor: var(--mainBorderColor-dark);
+  --mainBgColor: var(--mainBgColor-dark);
 }
 
 * {
@@ -52,6 +64,7 @@ li {
 li ion-icon {
   font-size: 2.4rem;
   margin-right: 0.5rem;
+  color: green;
 }
 
 .container--main {
@@ -88,8 +101,13 @@ a {
 .socials--list a {
   font-size: 1.4rem;
   color: var(--secondaryTextColor);
+  transition: 0.3s;
 }
 
 .socials--list a:hover {
   color: var(--mainLinkColor);
+}
+
+.qualifications--list {
+  list-style: none;
 }
