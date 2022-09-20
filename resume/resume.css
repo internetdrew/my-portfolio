@@ -55,7 +55,7 @@ a {
   font-weight: 500;
 }
 
-li {
+.qualifications--list li {
   display: flex;
   align-items: center;
   line-height: 3rem;
@@ -108,14 +108,11 @@ a {
   color: var(--mainLinkColor);
 }
 
-.qualifications--list {
-  list-style: none;
-}
-
 .wrapper--techstack__items {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  font-size: 1.4rem;
 }
 
 .card--techstack {
