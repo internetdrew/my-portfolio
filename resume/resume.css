@@ -120,3 +120,28 @@ a {
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
+
+.card--work-history {
+  border-left: 1px solid var(--mainBorderColor);
+  margin: 3rem 0;
+  padding-left: 2rem;
+}
+
+.line-break {
+  background-color: var(--mainBorderColor);
+  height: 1px;
+}
+
+.card--project {
+  padding: 1rem 0;
+  border-top: 1px solid var(--mainBorderColor);
+}
+
+.card--project a {
+  color: var(--mainTextColor);
+  transition: 0.3s;
+}
+
+.card--project a:hover {
+  color: var(--mainLinkColor);
+}
