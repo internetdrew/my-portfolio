@@ -12,14 +12,21 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
 body {
@@ -43,6 +50,9 @@ li {
 header {
   height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 section {
@@ -72,13 +82,15 @@ p {
 }
 
 section {
-  width: 90rem;
+  max-width: 90rem;
+  width: 100%;
   margin-bottom: 9.6rem;
   padding: 4.8rem;
 }
 
-.hidden {
-  display: none;
+.container--main {
+  max-width: 130rem;
+  margin: 0 auto;
 }
 
 .centered {
@@ -109,20 +121,18 @@ section {
   transform: scale(0.98);
 }
 
-.hero-container {
-  width: 100rem;
+.hero {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  padding: 4.8rem;
 }
 
-.hero-container h2 {
+.hero h2 {
   margin-bottom: 3.2rem;
 }
 
-.hero-container p {
+.hero p {
   margin-bottom: 1.8rem;
 }
 
@@ -136,6 +146,7 @@ section {
   justify-content: space-between;
   padding: 3.2rem 4.8rem;
   letter-spacing: 0.15rem;
+  margin-bottom: auto;
 }
 
 .main-nav .logo {
@@ -202,10 +213,6 @@ section {
 
 .social-links a:hover {
   color: var(--accent-color);
-}
-
-.hero-container-inner {
-  width: 75%;
 }
 
 /* *************** */
@@ -392,4 +399,11 @@ ion-icon {
   color: var(--accent-color);
   font-size: 4.8rem;
   transition: all 0.3s ease-in;
+}
+
+@media (max-width: 600px) {
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+  }
 }
