@@ -88,6 +88,10 @@ section {
   padding: 4.8rem;
 }
 
+.menu-btn {
+  display: none;
+}
+
 .container--main {
   max-width: 130rem;
   margin: 0 auto;
@@ -405,5 +409,35 @@ ion-icon {
   .main-nav {
     display: flex;
     flex-direction: column;
+  }
+
+  .main-nav .nav-links-container {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu-btn {
+    display: block;
+    font-size: 4rem;
+  }
+
+  .menu-btn:hover {
+    cursor: pointer;
+  }
+
+  .about-section--content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .arrow-up {
+    right: 0;
+    bottom: 3rem;
   }
 }
