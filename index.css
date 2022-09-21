@@ -437,7 +437,8 @@ ion-icon {
   }
 
   .arrow-up {
-    right: 0;
+    right: 1rem;
     bottom: 3rem;
+    font-size: 4rem;
   }
 }
