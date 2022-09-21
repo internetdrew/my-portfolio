@@ -436,6 +436,10 @@ ion-icon {
     justify-content: center;
   }
 
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
   .arrow-up {
     right: 1rem;
     bottom: 3rem;
