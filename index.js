@@ -16,7 +16,7 @@ const showArrow = function (entry) {
   if (entry[0].isIntersecting) arrow.style.display = 'none';
 };
 
-const toggleArrow = function () {
+const observeHeader = function () {
   const observer = new IntersectionObserver(showArrow, {
     rootMargin: '-200px',
     // threshold: 1,
@@ -63,7 +63,7 @@ const checkInputValidity = function (inputArr) {
 };
 
 // Event handlers
-window.addEventListener('scroll', toggleArrow);
+window.addEventListener('load', observeHeader);
 arrow.addEventListener('click', scrollToTop);
 form.addEventListener('submit', e => {
   e.preventDefault();
