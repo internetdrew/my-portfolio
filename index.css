@@ -418,6 +418,7 @@ ion-icon {
   .main-nav {
     display: flex;
     flex-direction: row;
+    padding: 2.8rem 4rem;
   }
 
   .menu-btn {
