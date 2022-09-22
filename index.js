@@ -13,8 +13,8 @@ const capFirstLetter = function (str) {
 };
 
 const showArrow = function (entry) {
-  if (!entry[0].isIntersecting) arrow.style.display = 'block';
-  if (entry[0].isIntersecting) arrow.style.display = 'none';
+  if (!entry[0].isIntersecting) arrow.classList.add('active');
+  if (entry[0].isIntersecting) arrow.classList.remove('active');
 };
 
 const observeHome = function () {
