@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 :root {
   --main-color: #647bff;
   --body-color: #09172a;
+  --body-color-faded: rgba(9, 23, 42, 0.98);
   --text-color: #e7e8ea;
   --accent-color: #d6336c;
-  --accent-color-faded: rgba(214, 51, 108, 0.2);
+  --accent-color-faded: #d6336c33;
   --success-color: #3ecc71;
   --error-color: #e74c3c;
 }
@@ -19,6 +20,8 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
 }
 body {
   height: 100vh;
@@ -26,8 +29,6 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: var(--body-color);
   color: var(--text-color);
-  scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
   position: relative;
 }
 img {
@@ -52,6 +53,10 @@ li {
   width: 100%;
 }
 
+.container--wide {
+  max-width: 110rem;
+}
+
 /* Header Styles */
 header {
   position: fixed;
@@ -59,12 +64,15 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
+  background-color: var(--body-color-faded);
 }
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 4rem 0;
+  background-color: var(--body-color-faded);
+  opacity: 98%;
 }
 .logo {
   font-size: 2.4rem;
@@ -89,7 +97,7 @@ header {
 }
 .res-link {
   border: 1px solid var(--text-color);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 0.6rem 1.2rem;
 }
 .res-link:hover {
@@ -139,7 +147,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
 }
 .home-img {
   width: 25rem;
@@ -204,16 +211,24 @@ header {
 /* Heading */
 .heading {
   font-size: 5rem;
+  font-weight: 900;
   text-transform: uppercase;
   text-align: center;
   color: var(--accent-color-faded);
+  margin-bottom: 2rem;
+}
+
+/* About content */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* Back to top arrow button */
 .up-arrow {
   display: none;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   bottom: 5rem;
   right: 5rem;
   font-size: 3.2rem;
