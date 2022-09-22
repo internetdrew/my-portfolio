@@ -118,3 +118,12 @@ header {
 .move .line3 {
   transform: rotate(45deg) translate(-5px, -5px);
 }
+
+.up-arrow {
+  cursor: pointer;
+  position: absolute;
+  font-size: 3.2rem;
+  color: var(--accent-color);
+  bottom: 5rem;
+  right: 5rem;
+}
