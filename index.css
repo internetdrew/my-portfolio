@@ -20,12 +20,14 @@ html {
   font-size: 62.5%;
 }
 body {
+  height: 100vh;
   font-size: 1.6rem;
   font-family: 'Lato', sans-serif;
   background-color: var(--body-color);
   color: var(--text-color);
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
+  position: relative;
 }
 img {
   width: 100%;
@@ -119,11 +121,19 @@ header {
   transform: rotate(45deg) translate(-5px, -5px);
 }
 
-.up-arrow {
-  cursor: pointer;
-  position: absolute;
+/* Social Links */
+.social-link {
   font-size: 3.2rem;
   color: var(--accent-color);
+}
+
+/* Back to top arrow button */
+.up-arrow {
+  display: none;
+  cursor: pointer;
+  position: absolute;
   bottom: 5rem;
   right: 5rem;
+  font-size: 3.2rem;
+  color: var(--accent-color);
 }
