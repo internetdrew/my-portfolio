@@ -5,6 +5,7 @@
   --body-color: #09172a;
   --text-color: #e7e8ea;
   --accent-color: #d6336c;
+  --accent-color-faded: rgba(214, 51, 108, 0.2);
   --success-color: #3ecc71;
   --error-color: #e74c3c;
 }
@@ -182,7 +183,7 @@ header {
   margin-bottom: 0.5rem;
 }
 .home-text p:nth-of-type(2) {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.4;
   letter-spacing: 1px;
   margin-bottom: 2rem;
@@ -198,6 +199,14 @@ header {
   font-size: 3.2rem;
   color: var(--accent-color);
   padding: 1rem;
+}
+
+/* Heading */
+.heading {
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--accent-color-faded);
 }
 
 /* Back to top arrow button */
