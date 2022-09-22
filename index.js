@@ -1,6 +1,6 @@
 'strict mode';
 
-const header = document.querySelector('header');
+const home = document.querySelector('.home');
 const arrow = document.getElementById('up-arrow');
 const form = document.getElementById('form');
 const nameEl = document.getElementById('name');
@@ -17,12 +17,12 @@ const showArrow = function (entry) {
   if (entry[0].isIntersecting) arrow.style.display = 'none';
 };
 
-const observeHeader = function () {
+const observeHome = function () {
   const observer = new IntersectionObserver(showArrow, {
     rootMargin: '-200px',
     // threshold: 1,
   });
-  observer.observe(header);
+  observer.observe(home);
 };
 
 const scrollToTop = function () {
@@ -64,7 +64,7 @@ const checkInputValidity = function (inputArr) {
 };
 
 // Event handlers
-window.addEventListener('load', observeHeader);
+window.addEventListener('load', observeHome);
 arrow.addEventListener('click', scrollToTop);
 // form.addEventListener('submit', e => {
 //   e.preventDefault();
