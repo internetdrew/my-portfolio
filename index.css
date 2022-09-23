@@ -19,6 +19,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
