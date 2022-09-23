@@ -55,12 +55,12 @@ ion-icon {
 .accent {
   color: var(--accent-color);
 }
+
 .container {
   max-width: 96rem;
   margin: auto;
   width: 100%;
 }
-
 .container--wide {
   max-width: 110rem;
 }
@@ -255,7 +255,7 @@ header {
 }
 .download-btn:hover {
   background-color: var(--accent-color-darker);
-  transition: 0.3s all linear;
+  transition: 0.3s;
 }
 .download-btn:active {
   transform: scale(0.95);
@@ -290,7 +290,7 @@ header {
 }
 .project-overlay {
   position: absolute;
-  top: 0;
+  top: -100%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -301,16 +301,118 @@ header {
   gap: 1rem;
   background: hsl(234, 45%, 16%, 0.7);
 }
+.project-overlay h2 {
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+.project-box:hover .project-overlay {
+  top: 0;
+  transition: 0.3s;
+}
 .project-links {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+.project-links a:nth-of-type(1) {
+  transform: rotate(-45deg);
+}
 .project-links ion-icon {
   font-size: 3.2rem;
 }
-.project-links a:nth-of-type(1) {
-  transform: rotate(-45deg);
+.project-links ion-icon:hover {
+  color: var(--accent-color-darker);
+  transition: 0.3s;
+}
+
+/* Contact Form */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  max-width: 70%;
+  width: 100%;
+}
+.form p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  width: 100%;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.form-control label,
+.form-control input,
+.form-control small,
+.form-control textarea {
+  display: block;
+  width: 100%;
+}
+
+.form-control label {
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.form-control input,
+.form-control textarea {
+  border: 0.2rem solid #f0f0f0;
+  border-radius: 4px;
+  padding: 1rem;
+  font: inherit;
+  font-size: 1.6rem;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: 0;
+}
+
+.form-control.success input,
+.form-control.success textarea {
+  border-color: var(--success-color);
+}
+
+.form-control.error input,
+.form-control.error textarea {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  font-size: 1.4rem;
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 4px;
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 /* Back to top arrow button */
