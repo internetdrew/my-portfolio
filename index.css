@@ -265,16 +265,18 @@ header {
 
 /* Back to top arrow button */
 .up-arrow {
-  opacity: 0;
   position: fixed;
   bottom: 5rem;
   right: 5rem;
   font-size: 4rem;
   color: var(--accent-color);
-  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
 }
 
 .up-arrow.active {
+  visibility: visible;
   opacity: 1;
   cursor: pointer;
 }
