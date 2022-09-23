@@ -418,6 +418,11 @@ header {
   margin-left: auto;
 }
 
+.form button:hover {
+  background-color: var(--accent-color-darker);
+  transition: 0.3s;
+}
+
 /* Back to top arrow button */
 .up-arrow {
   position: fixed;
