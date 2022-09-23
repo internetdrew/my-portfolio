@@ -326,14 +326,10 @@ header {
 }
 
 /* Contact Form */
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .form {
   max-width: 70rem;
+  margin: auto;
   width: 100%;
 }
 .form p {
