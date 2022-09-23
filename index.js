@@ -66,13 +66,13 @@ const checkInputValidity = function (inputArr) {
 // Event handlers
 window.addEventListener('load', observeHome);
 arrow.addEventListener('click', scrollToTop);
-// form.addEventListener('submit', e => {
-//   e.preventDefault();
-//   const inputs = [nameEl, email, message];
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const inputs = [nameEl, email, message];
 
-//   checkRequired(inputs);
-//   const allInputsValid = checkInputValidity(inputs);
+  checkRequired(inputs);
+  const allInputsValid = checkInputValidity(inputs);
 
-//   if (allInputsValid) form.submit();
-// });
+  if (allInputsValid) form.submit();
+});
 menu.addEventListener('click', () => menu.classList.toggle('move'));

@@ -409,11 +409,10 @@ header {
   background-color: var(--accent-color);
   color: var(--text-color);
   border: 0;
-  border-radius: 4px;
+  border-radius: 5px;
   display: block;
-  font-size: 2rem;
-  font-weight: 900;
-  padding: 1.4rem;
+  font-size: 1.8rem;
+  padding: 12px 16px;
   width: 20%;
   margin-left: auto;
 }
