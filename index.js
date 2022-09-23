@@ -63,10 +63,7 @@ const checkInputValidity = function (inputArr) {
   );
 };
 
-// Event handlers
-window.addEventListener('load', observeHome);
-arrow.addEventListener('click', scrollToTop);
-form.addEventListener('submit', e => {
+const handleForm = function (e) {
   e.preventDefault();
   const inputs = [nameEl, email, message];
 
@@ -74,5 +71,10 @@ form.addEventListener('submit', e => {
   const allInputsValid = checkInputValidity(inputs);
 
   if (allInputsValid) form.submit();
-});
+};
+
+// Event handlers
+window.addEventListener('load', observeHome);
+arrow.addEventListener('click', scrollToTop);
+form.addEventListener('submit', handleForm);
 menu.addEventListener('click', () => menu.classList.toggle('move'));
