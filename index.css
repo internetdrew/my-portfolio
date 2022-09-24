@@ -517,4 +517,7 @@ header {
   .heading {
     font-size: 4.2rem;
   }
+  .form button {
+    width: 100%;
+  }
 }
