@@ -81,11 +81,7 @@ header {
   padding: 4rem 0;
   background-color: var(--body-color-faded);
 }
-@media (max-width: 1115px) {
-  .nav {
-    padding: 2rem;
-  }
-}
+
 .logo {
   font-size: 2.4rem;
   font-weight: 700;
@@ -445,8 +441,74 @@ header {
   cursor: pointer;
 }
 
-@media (max-width: 1115px) {
+/* Media Queries */
+@media (max-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .nav {
+    padding: 2rem;
+  }
   .up-arrow {
-    right: 2rem;
+    display: none;
+  }
+  .container--wide {
+    max-width: 100rem;
+  }
+  .container {
+    max-width: 80%;
+  }
+  .project-box {
+    height: 24rem;
+  }
+}
+
+@media (max-width: 824px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  .about-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-data span {
+    display: none;
+  }
+  .about-data h2 {
+    text-align: center;
+  }
+  .about-text {
+    margin: 1rem auto;
+  }
+  .projects-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .container {
+    max-width: 80%;
+  }
+  .project-box {
+    min-height: 32rem;
+  }
+}
+
+@media (max-width: 655px) {
+  .container--wide {
+    min-width: 100%;
+  }
+  .home-img {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+@media (max-width: 547px) {
+  .container {
+    max-width: 80%;
   }
 }
