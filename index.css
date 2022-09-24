@@ -485,6 +485,9 @@ header {
   .about-text {
     margin: 1rem auto;
   }
+  .about-text p {
+    text-align: left;
+  }
   .projects-content {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -510,5 +513,8 @@ header {
 @media (max-width: 547px) {
   .container {
     max-width: 80%;
+  }
+  .heading {
+    font-size: 4rem;
   }
 }
