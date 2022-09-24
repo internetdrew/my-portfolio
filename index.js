@@ -74,11 +74,16 @@ const handleForm = function (e) {
   if (allInputsValid) form.submit();
 };
 
+const toggleMenu = function () {
+  menu.classList.toggle('move');
+  navbar.classList.toggle('open-menu');
+};
+
 // Event handlers
 window.addEventListener('load', observeHome);
 arrow.addEventListener('click', scrollToTop);
 form.addEventListener('submit', handleForm);
-menu.addEventListener('click', () => {
-  menu.classList.toggle('move');
-  navbar.classList.toggle('open-menu');
+menu.addEventListener('click', toggleMenu);
+navbar.addEventListener('click', e => {
+  if (e.target.className === 'nav-link') toggleMenu();
 });
