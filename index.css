@@ -443,20 +443,41 @@ header {
 
 /* Media Queries */
 @media (max-width: 1024px) {
-  .navbar {
-    display: none;
-  }
-  .menu-icon {
-    display: block;
-  }
   .nav {
     padding: 2rem;
+  }
+  .menu-icon {
+    display: flex;
+    gap: 0;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 30rem;
+    height: 100vh;
+    background-color: var(--body-color);
+    opacity: 0.98;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 2rem;
+  }
+  .open-menu {
+    right: 0;
+  }
+  .nav-link {
+    display: block;
+    margin: 1rem 0;
   }
   .up-arrow {
     display: none;
   }
   .container--wide {
-    max-width: 100rem;
+    min-width: 100%;
   }
   .container {
     max-width: 80%;
@@ -518,6 +539,12 @@ header {
     font-size: 4.2rem;
   }
   .form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar {
     width: 100%;
   }
 }

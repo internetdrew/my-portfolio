@@ -7,6 +7,7 @@ const nameEl = document.getElementById('name');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 const menu = document.getElementById('menu-icon');
+const navbar = document.getElementById('navbar');
 
 const capFirstLetter = function (str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -77,4 +78,7 @@ const handleForm = function (e) {
 window.addEventListener('load', observeHome);
 arrow.addEventListener('click', scrollToTop);
 form.addEventListener('submit', handleForm);
-menu.addEventListener('click', () => menu.classList.toggle('move'));
+menu.addEventListener('click', () => {
+  menu.classList.toggle('move');
+  navbar.classList.toggle('open-menu');
+});
