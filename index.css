@@ -306,7 +306,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background: hsl(234, 45%, 16%, 0.7);
+  background: rgb(34, 46, 63, 0.7);
 }
 .project-overlay h2 {
   font-weight: 900;
@@ -547,7 +547,7 @@ header {
     max-width: 80%;
   }
   .project-box {
-    min-height: 32rem;
+    min-height: 40rem;
   }
 }
 
@@ -562,9 +562,9 @@ header {
 }
 
 @media (max-width: 547px) {
-  .container {
+  /* .container {
     max-width: 80%;
-  }
+  } */
   .heading {
     font-size: 4.2rem;
   }
