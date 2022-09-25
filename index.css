@@ -442,10 +442,12 @@ header {
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
+@media (max-width: 1165px) {
   .nav {
     padding: 2rem;
   }
+}
+@media (max-width: 1024px) {
   .menu-icon {
     display: flex;
     gap: 0;
