@@ -468,6 +468,9 @@ header {
     align-items: center;
     padding: 8rem 2rem;
   }
+  .nav-link {
+    font-size: 2.4rem;
+  }
   .open-menu {
     right: 0;
   }
