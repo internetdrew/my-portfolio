@@ -19,15 +19,20 @@
   padding: 0;
   box-sizing: border-box;
 }
-::-webkit-scrollbar {
-  display: none;
-}
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
 }
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color-faded);
+}
+
 body {
   height: 100vh;
   font-size: 1.6rem;
@@ -434,6 +439,7 @@ header {
 .footer p {
   font-size: 1.8rem;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 /* Back to top arrow button */
@@ -458,6 +464,10 @@ header {
 @media (max-width: 1165px) {
   .nav {
     padding: 2rem;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 90%;
   }
 }
 @media (max-width: 1024px) {
@@ -484,16 +494,15 @@ header {
     height: 100vh;
   }
   .nav-link {
+    display: block;
+    margin: 1rem 0;
     font-size: 2.4rem;
     margin-bottom: 3rem;
   }
   .open-menu {
     right: 0;
   }
-  .nav-link {
-    display: block;
-    margin: 1rem 0;
-  }
+
   .up-arrow {
     display: none;
   }
