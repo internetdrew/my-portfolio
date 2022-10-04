@@ -306,7 +306,8 @@ header {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background: rgb(34, 46, 63, 0.7);
+  background: rgb(34, 46, 63, 0.9);
+  transition: 0.3s ease-in-out;
 }
 .project-overlay h2 {
   font-weight: 900;
@@ -314,7 +315,6 @@ header {
 }
 .project-box:hover .project-overlay {
   top: 0;
-  transition: 0.3s;
 }
 .project-links {
   display: flex;
